@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- log4j의 설정 첫 요소, 어떤 방식으로 내부 동작을 할 것인지 확인 -->
+<Configuration status="INFO">
+<Appenders>
+	<Console name="Console" target="SYSTEM_OUT">
+		<PatternLayout pattern="%d - %msg%n" />
+	</Console>
+</Appenders>
+<Loggers>
+	<Root level="INFO">
+		<AppenderRef ref="Console" />
+	</Root>
+</Loggers>
+</Configuration>

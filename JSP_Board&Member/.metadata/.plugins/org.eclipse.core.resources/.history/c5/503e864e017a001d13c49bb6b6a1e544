@@ -1,0 +1,40 @@
+package repository;
+
+import java.util.List;
+
+import org.apache.ibatis.session.SqlSession;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import domain.MemberVO;
+
+public class MemberDAOImpl implements MemberDAO {
+	private static final Logger log = LoggerFactory.getLogger(MemberDAOImpl.class);
+	private SqlSession sql;
+	private final String NS = "MemMapper."; 
+
+	@Override
+	public MemberVO login(MemberVO mvo) {
+		log.info("login 체크3");
+		return sql.selectOne(NS+"login", mvo);
+	}
+
+	@Override
+	public int register(MemberVO mvo) {
+		log.info("register 체크3");
+		System.out.println(mvo.getId());
+		System.out.println(mvo.getPassword());
+		System.out.println(mvo.getEmail());
+		System.out.println(mvo.getAge());
+		int isOk = sql.insert(NS+"register", mvo);
+		if(isOk >0)sql.commit();
+		return isOk;
+	}
+
+	@Override
+	public List<MemberVO> getMemList() {
+		log.info("member list 체크3");
+		return sql.selectList(NS+"memList");
+	}
+
+}

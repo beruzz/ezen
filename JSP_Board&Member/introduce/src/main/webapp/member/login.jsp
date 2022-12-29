@@ -1,0 +1,25 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>로그인 페이지</title>
+<style>
+.login {
+	position: absolute;
+	top: 45%;
+	left: 45%;
+	
+}
+</style>
+</head>
+<body>
+	<form action="/mc/login_auth" class="login" method="post">
+		<input type="text" name="id" placeholder="ID"><br> 
+		<input type="password" name="password" placeholder="Password"><br>
+		<button type="submit">로그인</button>
+	</form>
+</body>
+</html>

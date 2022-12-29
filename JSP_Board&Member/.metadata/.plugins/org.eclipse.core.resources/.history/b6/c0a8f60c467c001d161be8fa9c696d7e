@@ -1,0 +1,31 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<table>
+	<tr>
+		<th>회원번호</th>
+		<th>회원성명</th>
+		<th>전화번호</th>
+		<th>주소</th>
+		<th>가입일자</th>
+		<th>고객등급</th>
+		<th>거주지역</th>
+	</tr>
+	<tr>
+		<td><input type="text" name="custno"></td>
+		<td><input type="text" name="custname"></td>
+		<td><input type="text" name="phone"></td>
+		<td><input type="text" name="address"></td>
+		<td><input type="text" name="joindate"></td>
+		<td><input type="text" name="grade"></td>
+		<td><input type="text" name="city"></td>
+	</tr>
+</table>
+</body>
+</html>
